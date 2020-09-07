@@ -1,0 +1,296 @@
+* {
+    box-sizing              : border-box;
+}
+
+@font-face {
+    font-family: "Shrikhand-Regular";
+    src        : url('fonts/Shrikhand-Regular.ttf');
+}
+
+body{
+    margin     : 0; 
+}
+
+h1,h2,h3,h4,h6,p,ol,ul{
+    margin     : 0;
+    padding    : 0;
+}
+
+p,ol,ul,h5,h6{
+    font-family: robotoblack;
+    font-size  : 1.1em;
+}
+
+h1,h2,h3,h4{
+    font-family: Shrikhand-Regular;
+    font-size  : 1.7em;
+}
+
+h1{
+    line-height: 2;
+}
+
+aside,section,footer,main{
+    width      : 100%;
+    padding    : 6% 5%;
+}
+
+:link{
+    text-decoration: none;
+}
+
+:visited{
+    color          : rgb(0, 0, 0);
+}
+
+img{
+    width          : 100%;
+}
+
+button{
+    padding         : 20px;
+    border-radius   : 30px;
+    background-color: #9356DC;
+    color           : white;
+    border          : 2px solid #9356DC;
+    width           : 60%;
+    margin          : 30px;
+    cursor          : pointer;
+}
+
+button:hover{
+    transition-duration: 2s;
+    border             : 2px solid #FF79DA;
+    background-color   : #FF79DA;
+}
+
+/* Header */
+
+header{
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: rgb(255, 255, 255);
+}
+
+header i{ 
+    position : absolute;
+    left     : 20px;
+    top      : 15px;
+    font-size: 1.2em;
+}
+
+/* geolocalization */
+
+#geolock, iframe, #geolock p{
+    width           : 100%;
+    height          : 50px;
+}
+
+#geolock i{
+    padding-right   : 10px;
+}
+
+iframe{  
+    opacity         : 1;
+    border          : 1px solid rgb(9, 243, 192);
+}
+
+#geolock p{
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    position        : absolute;
+    background-color: rgb(240, 240, 240);
+    box-shadow      : inset 0px 7px 10px -6px rgba(0,0,0,0.56);
+    cursor          : pointer;
+}
+
+#geolock p:hover{
+    transition-duration: 3s;
+    opacity            : 0;
+}
+
+/* info restaurant block */
+
+#info{
+    display         : flex;
+    flex-direction  : column;
+    background-color: rgb(212, 212, 212);
+    text-align      : center;
+    padding         : 30px;
+}
+
+/* instruction */
+
+aside ol{  
+    position        : relative;
+}
+
+ol li:last-child{
+    background-color: rgb(255, 221, 255);
+}
+
+aside li{
+    display         : flex;
+    justify-content : start;
+    align-items     : center;
+    border-radius   : 10px;
+    height          : 50px;
+    background-color: rgb(228, 228, 228);
+    margin          : 30px 0;
+    box-shadow      : 0px 17px 26px -10px rgba(0,0,0,0.32);
+}
+
+ aside i{
+    padding         : 0 30px;
+}
+
+ aside P{
+    text-align      : center;
+    border-radius   : 50%;
+    width           : 25px;
+    position        : absolute;
+    color           : white;
+    border          : 1px solid black;
+    background-color: rgb(189, 99, 189);
+    left            : -9px;
+}
+
+#purple_font i{
+    color           : violet;
+}
+
+/* Section nav Menu  */
+
+section{ 
+    background-color: rgb(236, 236, 236);
+}
+
+.menu_block{
+    position        : relative;
+    border-radius   : 20px;
+    overflow        : hidden;
+    box-shadow      : 0px 17px 26px -10px rgba(0,0,0,0.32);
+    margin          : 10% 0;
+}
+
+.menu_block:hover{
+    transition: 3s;
+    transform : scale(1.1);
+    cursor    : pointer;
+}
+
+.green_new_top_right{
+    position        : absolute;
+    right           : 20px;
+    top             : 20px;
+    color           : rgb(92, 172, 13);
+    background-color: rgb(146, 245, 207);
+    padding         : 1% 5%;
+    border-radius   : 5px;
+    font-size       : 1.0em;
+}
+
+.under_menu{
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    padding         : 5% 5%;
+}
+
+.under_menu i{
+    font-size       : 2.0em;
+}
+
+.far:hover{
+    color: fuchsia;
+}
+
+/* main Menu 1 2 3 4 */
+
+span{
+    text-decoration      : underline;
+    text-decoration-color: turquoise;
+}
+
+.order_button{
+    display              : flex;
+    justify-content      : center;
+}
+
+main{
+    position             : relative;
+    background-color     : rgb(235, 235, 235);
+    border               : 2px solid white;
+    border-radius        : 30px 30px 0 0;
+    margin-top           : -45px;
+}
+
+main article{
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+.entrees, .main_dish, .desserts{
+    display: flex;
+    flex-direction: column;
+} 
+
+main article{
+    height               : 100px;
+    background-color     : white;
+    border-radius        : 10px;
+    box-shadow           : 0px 17px 26px -10px rgba(0,0,0,0.32);
+    margin               : 2% 0;
+    padding              : 0 5%;
+}
+
+/*animation*/
+
+.entrees{
+    animation-duration: 2s;
+    animation-name: loading;
+}
+@keyframes loading {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.main_dish{
+    animation-duration: 4s;
+    animation-name: loading;
+}
+
+.desserts{
+    animation-duration: 6s;
+    animation-name: loading;
+}
+
+/* footer */
+
+footer{  
+    color           : white;
+    background-color: rgb(66, 66, 66);   
+}
+
+footer ul{
+    list-style      : none;
+    display         : flex;
+    flex-direction  : column;
+    padding-top     : 10px;
+}
+
+footer i{
+    font-size       : 10px;
+    padding-right   : 20px;
+}
+
