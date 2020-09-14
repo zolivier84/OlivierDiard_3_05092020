@@ -2,88 +2,153 @@
     box-sizing              : border-box;
 }
 
-@font-face {
+@font-face{
     font-family: "Shrikhand-Regular";
     src        : url('fonts/Shrikhand-Regular.ttf');
+}
+ @font-face{ 
+    font-family: "robotoregular";
+    src        : url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face{ 
+    font-family: "robotoblack";
+    src        : url('fonts/Roboto-Black.ttf');
 }
 
 body{
     margin     : 0; 
 }
 
-h1,h2,h3,h4,h6,p,ol,ul{
+h1,h3,h4,h5,h6,ol,ul,p{
     margin     : 0;
     padding    : 0;
 }
 
-p,ol,ul,h5,h6{
-    font-family: robotoblack;
-    font-size  : 1.1em;
+p,ol,ul,h5,h6,h2{
+    font-family: robotoregular;   
 }
 
-h1,h2,h3,h4{
+h1,h4{
     font-family: Shrikhand-Regular;
     font-size  : 1.7em;
 }
 
-h1{
-    line-height: 2;
+h5{
+    margin-top: 25px;
+}
+
+h3{
+    font-family: robotoblack;
+    font-size: 1.3em;
+    font-weight: normal;
 }
 
 aside,section,footer,main{
     width      : 100%;
-    padding    : 6% 5%;
+    padding    : 5% 5%;
 }
 
 :link{
     text-decoration: none;
+    color: inherit;
 }
 
 :visited{
-    color          : rgb(0, 0, 0);
+    color          : initial;
 }
 
 img{
     width          : 100%;
+    height: auto;
 }
 
 button{
-    padding         : 20px;
-    border-radius   : 30px;
-    background-color: #9356DC;
-    color           : white;
-    border          : 2px solid #9356DC;
-    width           : 60%;
-    margin          : 30px;
-    cursor          : pointer;
+    padding      : 20px;
+    border-radius: 30px;
+    color        : white;
+    border       : 1px solid #b15fdb;
+    min-width: 200px;
+    margin       : 30px;
+    cursor       : pointer;
+    background   : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
+    box-shadow   : 0px 10px 10px 0px rgba(0,0,0,0.32);
 }
 
+
 button:hover{
-    transition-duration: 2s;
-    border             : 2px solid #FF79DA;
-    background-color   : #FF79DA;
+    transition-duration: 1s;
+    box-shadow: 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
+}
+
+/* Loading Spinner */
+
+.Loading_screen{
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(34, 34, 34);
+    z-index: 3;
+    animation: 2s  fade_in_out;
+    animation-fill-mode: forwards;
+}
+
+.spinner{
+    width: 50px;
+    height: 50px;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: #1c87c9;
+    border-radius: 50%;
+    animation: 3s linear  spinner;
+}
+
+@keyframes spinner {
+    0% { 
+      transform: rotate(0deg);
+    }
+    100% {  
+      transform: rotate(3turn);
+    }
+  }
+  
+@keyframes fade_in_out{
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /* Header */
 
 header{
     display         : flex;
-    justify-content : center;
+    text-align: center;
+    justify-content: center;
     align-items     : center;
+    align-content: center;
     background-color: rgb(255, 255, 255);
+    padding: 2% 3%;
 }
 
-header i{ 
-    position : absolute;
-    left     : 20px;
-    top      : 15px;
+.arrow_stealth{
+    visibility: hidden;
+}
+
+h1{
+    width: 90%;
+}
+header i{
     font-size: 1.2em;
 }
 
 /* geolocalization */
 
 #geolock, iframe, #geolock p{
-    width           : 100%;
+    width           :100%;
     height          : 50px;
 }
 
@@ -94,6 +159,7 @@ header i{
 iframe{  
     opacity         : 1;
     border          : 1px solid rgb(9, 243, 192);
+    width: 100%;
 }
 
 #geolock p{
@@ -107,7 +173,7 @@ iframe{
 }
 
 #geolock p:hover{
-    transition-duration: 3s;
+    transition-duration: 2s;
     opacity            : 0;
 }
 
@@ -128,7 +194,7 @@ aside ol{
 }
 
 ol li:last-child{
-    background-color: rgb(255, 221, 255);
+    background-color: rgb(245, 237, 255);
 }
 
 aside li{
@@ -138,7 +204,7 @@ aside li{
     border-radius   : 10px;
     height          : 50px;
     background-color: rgb(228, 228, 228);
-    margin          : 30px 0;
+    margin          : 20px 0;
     box-shadow      : 0px 17px 26px -10px rgba(0,0,0,0.32);
 }
 
@@ -149,16 +215,16 @@ aside li{
  aside P{
     text-align      : center;
     border-radius   : 50%;
-    width           : 25px;
+    width           : 22px;
     position        : absolute;
     color           : white;
-    border          : 1px solid black;
-    background-color: rgb(189, 99, 189);
+    border             : 1px solid rgb(151, 92, 221);
+    background-color: rgb(151, 92, 221);
     left            : -9px;
 }
 
 #purple_font i{
-    color           : violet;
+    color           : rgb(151, 92, 221);
 }
 
 /* Section nav Menu  */
@@ -171,25 +237,27 @@ section{
     position        : relative;
     border-radius   : 20px;
     overflow        : hidden;
-    box-shadow      : 0px 17px 26px -10px rgba(0,0,0,0.32);
-    margin          : 10% 0;
+    box-shadow      : 0px 0px 30px 10px rgba(0,0,0,0.32);
+    margin          : 9% 0;
 }
 
 .menu_block:hover{
-    transition: 3s;
-    transform : scale(1.1);
+    transition: 1s;
+    transform : scale(1.05);
     cursor    : pointer;
+    box-shadow: 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
 }
 
 .green_new_top_right{
     position        : absolute;
     right           : 20px;
     top             : 20px;
-    color           : rgb(92, 172, 13);
-    background-color: rgb(146, 245, 207);
-    padding         : 1% 5%;
-    border-radius   : 5px;
-    font-size       : 1.0em;
+    color           :  rgb(94, 160, 145);
+    background-color:  rgb(153, 226, 208);
+    padding         : 1% 6%;
+    border-radius   : 8px;
+    font-size       : 0.9em;
+    font-family: robotoblack;
 }
 
 .under_menu{
@@ -199,35 +267,52 @@ section{
     padding         : 5% 5%;
 }
 
-.under_menu i{
-    font-size       : 2.0em;
+.heart{
+    position: relative;
+    display: flex;
 }
 
-.far:hover{
-    color: fuchsia;
+.heart .far{
+    z-index: 2;
+    background-color: rgb(236, 236, 236);
+}
+
+.heart .fas{
+    background   : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
+    position: absolute;
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+}
+
+.heart .far:hover{
+    animation: 1s  fade_in_out;
+    animation-fill-mode: forwards;
+}
+
+.heart .far:hover ~ .fas{
+    animation: 1.5s heart_grow ;
+}
+
+@keyframes heart_grow{
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1);
+    }
 }
 
 /* main Menu 1 2 3 4 */
-
-span{
-    text-decoration      : underline;
-    text-decoration-color: turquoise;
-}
-
-.order_button{
-    display              : flex;
-    justify-content      : center;
-}
 
 main{
     position             : relative;
     background-color     : rgb(235, 235, 235);
     border               : 2px solid white;
-    border-radius        : 30px 30px 0 0;
-    margin-top           : -45px;
+    border-radius        : 35px 35px 0 0;
+    margin-top           : -35px;
 }
 
-main article{
+.menu_title,main article{
     display        : flex;
     justify-content: space-between;
     align-items    : center;
@@ -239,43 +324,116 @@ main article{
 } 
 
 main article{
-    height               : 100px;
-    background-color     : white;
-    border-radius        : 10px;
-    box-shadow           : 0px 17px 26px -10px rgba(0,0,0,0.32);
-    margin               : 2% 0;
-    padding              : 0 5%;
+    height          : 80px;
+    background-color: white;
+    border-radius   : 22px;
+    box-shadow      : 0px 17px 26px -10px rgba(0,0,0,0.32);
+    margin          : 1% 1%;
+    padding         : 0 0 0 5%;
+    overflow: hidden;
+    width: 100%;
 }
 
-/*animation*/
+main article, .heart:hover{
+    cursor: pointer;
+}
+
+.check_fonction{
+    height: 100%;
+    width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 226, 208);
+}
+
+main article:hover .check_fonction{
+    transition-duration: 0.3s;
+    width: 90px;
+    font-size: 1.3em;
+    visibility: visible;   
+}
+
+main article:hover{
+    transition-duration: 1s;
+    box-shadow      : 0px 17px 6px -10px rgba(0,0,0,0.32);
+}
+
+main article p{
+    margin-right: 4%;
+}
+
+.check_fonction i{
+    color: white;
+}
+
+main article:hover .check_fonction i{
+    animation: rotate_check 0.8s ease-in-out 0s;
+}
+
+@keyframes rotate_check {
+    from {
+        transform:rotate(0);
+    }
+
+    to {
+        transform:rotate(1turn);
+    }
+}
+
+.empty_space{
+    border-bottom:2px solid turquoise;
+    height: 5px;
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+.order_button{
+    display              : flex;
+    justify-content      : center;
+}
+
+.left_container{
+    width: 80%;
+    overflow: hidden;
+}
+
+.left_container p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:  nowrap;
+}
+
+/*animation main menu 1 2 3 4*/
+
+.entrees, .main_dish,.desserts{
+    animation-name: slide;
+}
 
 .entrees{
-    animation-duration: 2s;
-    animation-name: loading;
-}
-@keyframes loading {
-    from{
-        opacity: 0;
-        transform: scale(0);
-    }
-
-    to{
-        transform: scale(1);
-        opacity: 1;
-    }
+    animation-duration: 1s;
 }
 
 .main_dish{
-    animation-duration: 4s;
-    animation-name: loading;
+    animation-duration: 2s;
 }
 
 .desserts{
-    animation-duration: 6s;
-    animation-name: loading;
+    animation-duration: 3s;
 }
 
-/* footer */
+@keyframes slide {
+    from{
+        opacity: 0;
+        transform: translatey(15%);
+    }
+    to{
+        opacity: 1;
+        transform: translatey(0);
+    }
+  }
+
+  /* footer */
 
 footer{  
     color           : white;
@@ -291,6 +449,80 @@ footer ul{
 
 footer i{
     font-size       : 10px;
-    padding-right   : 20px;
+    padding-right   : 10px;
 }
 
+/* Media query */
+
+@media screen and (max-width: 359px){
+    *{
+        font-size: 0.9em;
+    }
+
+    main article{
+        height: 40px;
+        border-radius: 15px;
+    }
+
+    main article:hover .check_fonction{
+        transition-duration: 0.3s;
+        width: 30px;   
+    }
+
+    aside P{
+        width: 12px;
+        left            : 5px;
+    }
+
+    button{
+        min-width: 60%;
+    }
+
+    aside li{
+        height          : 25px;
+        margin: 10px;
+    }
+    aside i{
+        padding: 0 15px;
+    }
+
+    img{
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .menu_block{
+        margin: 10px 10px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .entrees, .main_dish, .desserts{
+        display: flex;
+        flex-direction: row;
+    }
+
+    main{
+        margin-top: -260px;
+        
+    }
+    
+    body{
+        margin: 0 10%;
+        box-shadow      :  0px 7px 10px -6px rgba(0,0,0,0.56);
+    }
+
+    #geolock, iframe, #geolock p,.Loading_screen{
+        width: 80%;
+    }
+
+    iframe{
+        width: 125%;
+    }
+
+    
+}

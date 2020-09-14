@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2f9827c712.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <title>Ohmyfood Menu 1</title>
 </head>
 <body>
@@ -14,84 +13,117 @@
             <i class="fas fa-arrow-left"></i>
         </a>
         <h1>Ohmyfood</h1>
+        <div class="arrow_stealth"><i class="fas fa-arrow-left"></i></div>
     </header>
     <img src="img/mini_menu_1.jpg" alt="délicious palette"> 
     <main>
-        <div>
-        <h1>The Full Palette</h1>
-        <i class="far fa-heart"></i>
+        <div class="menu_title">
+            <h1>The Full Palette</h1>
+            <div class="heart">
+                <i class="far fa-heart"></i> 
+                <i class="fas fa-heart"></i>
+            </div>  
         </div>
-        
-        <h5><span>ENTR</span>EES</h5>
+        <h5>ENTREES</h5>
+        <div class="empty_space"></div>
         <div class="entrees">
             <article>
-                <div>
-                    <h6>Escargot</h6>
+                <div class="left_container">
+                    <h3>Escargot</h3>
                     <p>With southern French spices</p>   
                 </div>
                 <p>25€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Duck Foie Gras</h3>
+                    <p>With black Truffle shaving</p>   
                 </div>
-                <p>25€</p>
+                <p>35€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Fried egg</h3>
+                    <p>With delicious pan cake</p>   
                 </div>
-                <p>25€</p>
+                <p>20€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
         </div>  
-        <h5><span>MAIN</span> DISH</h5>
+        <h5>MAIN DISH</h5>
+        <div class="empty_space"></div>
         <div class="main_dish">
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Herb-Encrusted Steak</h3>
+                    <p>With delicately sliced and seasoned vegetables</p>   
                 </div>
-                <p>25€</p>
+                <p>40€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Ox Tail Shepard's Pie</h3>
+                    <p>With black truffle and pureed parsnips</p>   
                 </div>
-                <p>25€</p>
+                <p>35€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Filet of Sole</h3>
+                    <p>With citrus dressing</p>   
                 </div>
-                <p>25€</p>
+                <p>44€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
         </div>  
-        <h5><span>DESS</span>ERTS</h5>
+        <h5>DESSERTS</h5>
+        <div class="empty_space"></div>
         <div class="desserts">
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Paris-Brest</h3>
+                    <p>Revisited</p>   
                 </div>
-                <p>25€</p>
+                <p>18€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Chocolate Macaroons</h3>
+                    <p>With vanilla ice cream</p>   
                 </div>
-                <p>25€</p>
+                <p>22€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
             <article>
-                <div>
-                    <h6>Escargot</h6>
-                    <p>With southern French spices</p>   
+                <div class="left_container">
+                    <h3>Chocolate Mousse</h3>
+                    <p>With spices and black truffle</p>   
                 </div>
                 <p>25€</p>
+                <div class="check_fonction">
+                    <i class="fas fa-check-circle"></i>
+                </div>
             </article>
         </div>
         <div class="order_button"><button><P>Order</P></button></div>
@@ -102,7 +134,7 @@
             <li><i class="fas fa-utensils"></i>&nbsp;suggest a restaurant</li>
             <li><i class="fas fa-hands-helping"></i>become a partner</li>
             <li>Legal</li>
-            <li>Contact</li>
+            <li><a href="mailto:zolivier84@live.fr">Contact</A></li>
         </ul>
     </footer>
     

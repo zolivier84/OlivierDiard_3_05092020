@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2f9827c712.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+    
     <title>Ohmyfood</title>
 </head>
 <body>
+    <div class="Loading_screen">
+        <div class="spinner"></div>
+    </div>  
     <header>
         <h1>Ohmyfood</h1>
     </header>
@@ -20,15 +23,15 @@
     </a>    
     <article id="info">
         <h2>Book the menu you like</h2>
-        <p>discover top-of-the-art restaurants we picked for you</p>
+        <p>Discover top-of-the-art restaurants we picked for you</p>
         <div>
-            <button><p>Explore ou restaurants</p></button>
+            <button><p>Explore our restaurants</p></button>
         </div>
     </article>
     <aside>
         <h2>How it Works</h2>
         <ol>
-            <li><p>1</p><i class="fas fa-mobile-alt"></i>Choose a restaurant</li>
+            <li><p>1</p><i class="fas fa-mobile-alt"></i>&nbsp;Choose a restaurant</li>
             <li><p>2</p><i class="fas fa-list-ul"></i>Create your menu</li>
             <li id="purple_font"><p>3</p><i class="fas fa-store"></i>Go enjoy it at the restaurant</li>
         </ol>
@@ -38,27 +41,33 @@
         <nav>
             <div class="menu_block">
                 <a href="menu_1.html">
-                    <p class="green_new_top_right">NEW</p>
+                    <p class="green_new_top_right">New</p>
                     <img src="img/mini_menu_1.jpg" alt="délicious palette">
                     <div class="under_menu">
                         <div>
                             <h3>The Full Palette</h3>
                             <p>New York</p>
                         </div>
-                        <i class="far fa-heart"></i> 
+                        <div class="heart">
+                            <i class="far fa-heart"></i> 
+                            <i class="fas fa-heart"></i>
+                        </div>
                      </div>
                 </a>    
             </div>
             <div class="menu_block">
                 <a href="menu_2.html">
-                    <p class="green_new_top_right">NEW</p>
+                    <p class="green_new_top_right">New</p>
                     <img src="img/mini_menu_2.jpg" alt="fairy plate">
                     <div class="under_menu">
                         <div>
                             <h3>The Enchanted Plate</h3>
                             <p>New York</p>
                         </div>
-                        <i class="far fa-heart"></i> 
+                        <div class="heart">
+                            <i class="far fa-heart"></i> 
+                            <i class="fas fa-heart"></i>
+                        </div>
                     </div>
                 </a>    
             </div>
@@ -70,7 +79,10 @@
                             <h3>Bastille</h3>
                             <p>New York</p>
                         </div>
-                        <i class="far fa-heart"></i>   
+                        <div class="heart">
+                            <i class="far fa-heart"></i> 
+                            <i class="fas fa-heart"></i>
+                        </div>  
                     </div>
                 </a>
             </div>
@@ -82,7 +94,10 @@
                             <h3>Le Gourmand</h3>
                             <p>New York</p>
                         </div>
-                        <i class="far fa-heart"></i>   
+                        <div class="heart">
+                            <i class="far fa-heart"></i> 
+                            <i class="fas fa-heart"></i>
+                        </div> 
                     </div>
                 </a>    
             </div>
@@ -94,7 +109,7 @@
             <li><i class="fas fa-utensils"></i>&nbsp;suggest a restaurant</li>
             <li><i class="fas fa-hands-helping"></i>become a partner</li>
             <li>Legal</li>
-            <li>Contact</li>
+            <li><a href="mailto:zolivier84@live.fr">Contact</A></li>
         </ul>
     </footer>
     
