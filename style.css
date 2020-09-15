@@ -1,5 +1,5 @@
 * {
-    box-sizing              : border-box;
+    box-sizing : border-box;
 }
 
 @font-face{
@@ -35,12 +35,12 @@ h1,h4{
 }
 
 h5{
-    margin-top: 25px;
+    margin-top : 25px;
 }
 
 h3{
     font-family: robotoblack;
-    font-size: 1.3em;
+    font-size  : 1.3em;
     font-weight: normal;
 }
 
@@ -51,7 +51,7 @@ aside,section,footer,main{
 
 :link{
     text-decoration: none;
-    color: inherit;
+    color          : inherit;
 }
 
 :visited{
@@ -59,7 +59,7 @@ aside,section,footer,main{
 }
 
 img{
-    width          : 100%;
+    width : 100%;
     height: auto;
 }
 
@@ -68,7 +68,7 @@ button{
     border-radius: 30px;
     color        : white;
     border       : 1px solid #b15fdb;
-    min-width: 200px;
+    min-width    : 200px;
     margin       : 30px;
     cursor       : pointer;
     background   : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
@@ -78,32 +78,32 @@ button{
 
 button:hover{
     transition-duration: 1s;
-    box-shadow: 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
+    box-shadow         : 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
 }
 
 /* Loading Spinner */
 
 .Loading_screen{
-    opacity: 0.7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: rgb(34, 34, 34);
-    z-index: 3;
-    animation: 2s  fade_in_out;
+    opacity            : 0.7;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    width              : 100%;
+    height             : 100%;
+    position           : fixed;
+    background-color   : rgb(34, 34, 34);
+    z-index            : 3;
+    animation          : 2s  fade_in_out;
     animation-fill-mode: forwards;
 }
 
 .spinner{
-    width: 50px;
-    height: 50px;
-    border: solid 5px #cfd0d1;
+    width              : 50px;
+    height             : 50px;
+    border             : solid 5px #cfd0d1;
     border-bottom-color: #1c87c9;
-    border-radius: 50%;
-    animation: 3s linear  spinner;
+    border-radius      : 50%;
+    animation          : 3s linear  spinner;
 }
 
 @keyframes spinner {
@@ -117,7 +117,7 @@ button:hover{
   
 @keyframes fade_in_out{
     to{
-        opacity: 0;
+        opacity   : 0;
         visibility: hidden;
     }
 }
@@ -126,12 +126,12 @@ button:hover{
 
 header{
     display         : flex;
-    text-align: center;
-    justify-content: center;
+    text-align      : center;
+    justify-content : center;
     align-items     : center;
-    align-content: center;
+    align-content   : center;
     background-color: rgb(255, 255, 255);
-    padding: 2% 3%;
+    padding         : 2% 3%;
 }
 
 .arrow_stealth{
@@ -139,10 +139,10 @@ header{
 }
 
 h1{
-    width: 90%;
+    width     : 90%;
 }
 header i{
-    font-size: 1.2em;
+    font-size : 1.2em;
 }
 
 /* geolocalization */
@@ -269,23 +269,23 @@ section{
 
 .heart{
     position: relative;
-    display: flex;
+    display : flex;
 }
 
 .heart .far{
-    z-index: 2;
+    z-index         : 2;
     background-color: rgb(236, 236, 236);
 }
 
 .heart .fas{
-    background   : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
-    position: absolute;
-    -webkit-text-fill-color:transparent;
+    background             : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
+    position               : absolute;
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .heart .far:hover{
-    animation: 1s  fade_in_out;
+    animation          : 1s  fade_in_out;
     animation-fill-mode: forwards;
 }
 
@@ -319,7 +319,7 @@ main{
 }
 
 .entrees, .main_dish, .desserts{
-    display: flex;
+    display       : flex;
     flex-direction: column;
 } 
 
@@ -330,8 +330,8 @@ main article{
     box-shadow      : 0px 17px 26px -10px rgba(0,0,0,0.32);
     margin          : 1% 1%;
     padding         : 0 0 0 5%;
-    overflow: hidden;
-    width: 100%;
+    overflow        : hidden;
+    width           : 100%;
 }
 
 main article, .heart:hover{
@@ -339,24 +339,24 @@ main article, .heart:hover{
 }
 
 .check_fonction{
-    height: 100%;
-    width: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height          : 100%;
+    width           : 0;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
     background-color: rgb(153, 226, 208);
 }
 
 main article:hover .check_fonction{
     transition-duration: 0.3s;
-    width: 90px;
-    font-size: 1.3em;
-    visibility: visible;   
+    width              : 90px;
+    font-size          : 1.3em;
+    visibility         : visible;   
 }
 
 main article:hover{
     transition-duration: 1s;
-    box-shadow      : 0px 17px 6px -10px rgba(0,0,0,0.32);
+    box-shadow         : 0px 17px 6px -10px rgba(0,0,0,0.32);
 }
 
 main article p{
@@ -382,9 +382,9 @@ main article:hover .check_fonction i{
 }
 
 .empty_space{
-    border-bottom:2px solid turquoise;
-    height: 5px;
-    width: 35px;
+    border-bottom: 2px solid turquoise;
+    height       : 5px;
+    width        : 35px;
     margin-bottom: 10px;
 }
 
@@ -394,20 +394,20 @@ main article:hover .check_fonction i{
 }
 
 .left_container{
-    width: 80%;
+    width   : 80%;
     overflow: hidden;
 }
 
 .left_container p{
-    overflow: hidden;
+    overflow     : hidden;
     text-overflow: ellipsis;
-    white-space:  nowrap;
+    white-space  : nowrap;
 }
 
 /*animation main menu 1 2 3 4*/
 
 .entrees, .main_dish,.desserts{
-    animation-name: slide;
+    animation-name    : slide;
 }
 
 .entrees{
@@ -424,12 +424,12 @@ main article:hover .check_fonction i{
 
 @keyframes slide {
     from{
-        opacity: 0;
-        transform: translatey(15%);
+        opacity       : 0;
+        transform     : translatey(15%);
     }
     to{
-        opacity: 1;
-        transform: translatey(0);
+        opacity       : 1;
+        transform     : translatey(0);
     }
   }
 
@@ -456,72 +456,72 @@ footer i{
 
 @media screen and (max-width: 359px){
     *{
-        font-size: 0.9em;
+        font-size           : 0.9em;
     }
 
     main article{
-        height: 40px;
-        border-radius: 15px;
+        height              : 40px;
+        border-radius       : 15px;
     }
 
-    main article:hover .check_fonction{
-        transition-duration: 0.3s;
-        width: 30px;   
+    main article            : hover .check_fonction{
+        transition-duration : 0.3s;
+        width               : 30px;   
     }
 
     aside P{
-        width: 12px;
-        left            : 5px;
+        width               : 12px;
+        left                : 5px;
     }
 
     button{
-        min-width: 60%;
+        min-width           : 60%;
     }
 
     aside li{
-        height          : 25px;
-        margin: 10px;
+        height              : 25px;
+        margin              : 10px;
     }
     aside i{
-        padding: 0 15px;
+        padding             : 0 15px;
     }
 
     img{
-        height: 150px;
+        height              : 150px;
     }
 }
 
 @media screen and (min-width: 1025px){
     .menu_block{
-        margin: 10px 10px;
+        margin              : 10px 10px;
     }
 
     nav{
-        display: flex;
-        justify-content: space-between;
+        display             : flex;
+        justify-content     : space-between;
     }
 
     .entrees, .main_dish, .desserts{
-        display: flex;
-        flex-direction: row;
+        display             : flex;
+        flex-direction      : row;
     }
 
     main{
-        margin-top: -260px;
+        margin-top          : -260px;
         
     }
     
     body{
-        margin: 0 10%;
-        box-shadow      :  0px 7px 10px -6px rgba(0,0,0,0.56);
+        margin              : 0 10%;
+        box-shadow          : 0px 7px 10px -6px rgba(0,0,0,0.56);
     }
 
     #geolock, iframe, #geolock p,.Loading_screen{
-        width: 80%;
+        width               : 80%;
     }
 
     iframe{
-        width: 125%;
+        width               : 125%;
     }
 
     
