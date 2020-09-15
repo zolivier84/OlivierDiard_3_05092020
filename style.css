@@ -20,25 +20,29 @@ body{
     margin     : 0; 
 }
 
-h1,h3,h4,h5,h6,ol,ul,p{
+h1,h4,h5,ol,ul,p{
     margin     : 0;
     padding    : 0;
 }
 
-p,ol,ul,h5,h6,h2{
+p,ol,ul,h5,h3,h6,h2{
     font-family: robotoregular;   
 }
 
-h1,h4{
+h1{
     font-family: Shrikhand-Regular;
     font-size  : 1.7em;
+}
+
+h3{
+    margin-bottom: 5px;
 }
 
 h5{
     margin-top : 25px;
 }
 
-h3{
+h4{
     font-family: robotoblack;
     font-size  : 1.3em;
     font-weight: normal;
@@ -52,10 +56,11 @@ aside,section,footer,main{
 :link{
     text-decoration: none;
     color          : inherit;
+    cursor: pointer;
 }
 
-:visited{
-    color          : initial;
+a:visited{
+    color          : inherit;
 }
 
 img{
@@ -70,9 +75,9 @@ button{
     border       : 1px solid #b15fdb;
     min-width    : 200px;
     margin       : 30px;
-    cursor       : pointer;
     background   : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
     box-shadow   : 0px 10px 10px 0px rgba(0,0,0,0.32);
+    cursor: pointer;
 }
 
 
@@ -80,6 +85,7 @@ button:hover{
     transition-duration: 1s;
     box-shadow         : 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
 }
+
 
 /* Loading Spinner */
 
@@ -147,19 +153,13 @@ header i{
 
 /* geolocalization */
 
-#geolock, iframe, #geolock p{
+#geolock, #geolock p{
     width           :100%;
     height          : 50px;
 }
 
 #geolock i{
     padding-right   : 10px;
-}
-
-iframe{  
-    opacity         : 1;
-    border          : 1px solid rgb(9, 243, 192);
-    width: 100%;
 }
 
 #geolock p{
@@ -169,12 +169,6 @@ iframe{
     position        : absolute;
     background-color: rgb(240, 240, 240);
     box-shadow      : inset 0px 7px 10px -6px rgba(0,0,0,0.56);
-    cursor          : pointer;
-}
-
-#geolock p:hover{
-    transition-duration: 2s;
-    opacity            : 0;
 }
 
 /* info restaurant block */
@@ -244,7 +238,6 @@ section{
 .menu_block:hover{
     transition: 1s;
     transform : scale(1.05);
-    cursor    : pointer;
     box-shadow: 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
 }
 
@@ -382,8 +375,7 @@ main article:hover .check_fonction i{
 }
 
 .empty_space{
-    border-bottom: 2px solid turquoise;
-    height       : 5px;
+    border-top: 2px solid turquoise;
     width        : 35px;
     margin-bottom: 10px;
 }
@@ -464,7 +456,7 @@ footer i{
         border-radius       : 15px;
     }
 
-    mamain article:hover .check_fonction{
+    main article:hover .check_fonction{
         transition-duration : 0.3s;
         width               : 30px;   
     }
@@ -516,13 +508,7 @@ footer i{
         box-shadow          : 0px 7px 10px -6px rgba(0,0,0,0.56);
     }
 
-    #geolock, iframe, #geolock p,.Loading_screen{
+    #geolock, #geolock p,.Loading_screen{
         width               : 80%;
     }
-
-    iframe{
-        width               : 125%;
-    }
-
-    
 }
