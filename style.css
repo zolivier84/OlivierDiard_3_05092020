@@ -464,7 +464,7 @@ footer i{
         border-radius       : 15px;
     }
 
-    main article            : hover .check_fonction{
+    mamain article:hover .check_fonction{
         transition-duration : 0.3s;
         width               : 30px;   
     }
