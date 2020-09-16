@@ -346,13 +346,16 @@ main article, .heart:hover{
     background-color: rgb(153, 226, 208);
 }
 
-main article:hover .check_fonction{
-    animation: 0.5s slide_x;
+main article:hover .check_fonction{ 
+    transition-duration: 0.5s;
+    width              : 90px;
+    font-size          : 1.3em;
+    visibility         : visible;
+    /*animation: 0.5s slide_x;*/
 }
 
 @keyframes slide_x{
     from{
-
     }
     to{
         width              : 90px;
