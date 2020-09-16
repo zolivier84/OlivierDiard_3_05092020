@@ -76,16 +76,23 @@ button{
     min-width    : 200px;
     margin       : 30px;
     background   : linear-gradient(45deg,  #ee83db 0%,#a35adb 99%);
+    cursor: pointer;
     box-shadow   : 0px 10px 10px 0px rgba(0,0,0,0.32);
+}
+
+
+.animation_button:hover{
+    animation: shadow 0.8s ease-in-out ;
     cursor: pointer;
 }
 
-
-button:hover{
-    transition-duration: 1s;
-    box-shadow         : 0px 17px 6px -10px rgba(0, 0, 0, 0.432);
+@keyframes shadow{
+    from{  
+    }
+    to{  
+        box-shadow         : 0px 20px 6px -10px rgba(0, 0, 0, 0.432);
+    }
 }
-
 
 /* Loading Spinner */
 
@@ -212,7 +219,7 @@ aside li{
     width           : 22px;
     position        : absolute;
     color           : white;
-    border             : 1px solid rgb(151, 92, 221);
+    border          : 1px solid rgb(151, 92, 221);
     background-color: rgb(151, 92, 221);
     left            : -9px;
 }
@@ -278,8 +285,7 @@ section{
 }
 
 .heart .far:hover{
-    animation          : 1s  fade_in_out;
-    animation-fill-mode: forwards;
+    animation          : 1.5s  fade_in_out /*forwards*/;
 }
 
 .heart .far:hover ~ .fas{
@@ -341,10 +347,18 @@ main article, .heart:hover{
 }
 
 main article:hover .check_fonction{
-    transition-duration: 0.3s;
-    width              : 90px;
-    font-size          : 1.3em;
-    visibility         : visible;   
+    animation: 0.5s slide_x;
+}
+
+@keyframes slide_x{
+    from{
+
+    }
+    to{
+        width              : 90px;
+        font-size          : 1.3em;
+        visibility         : visible; 
+    }
 }
 
 main article:hover{
@@ -361,7 +375,7 @@ main article p{
 }
 
 main article:hover .check_fonction i{
-    animation: rotate_check 0.8s ease-in-out 0s;
+    animation: rotate_check 0.8s ease-in-out ;
 }
 
 @keyframes rotate_check {
@@ -399,7 +413,7 @@ main article:hover .check_fonction i{
 /*animation main menu 1 2 3 4*/
 
 .entrees, .main_dish,.desserts{
-    animation-name    : slide;
+    animation-name    : slide_y;
 }
 
 .entrees{
@@ -414,7 +428,7 @@ main article:hover .check_fonction i{
     animation-duration: 3s;
 }
 
-@keyframes slide {
+@keyframes slide_y {
     from{
         opacity       : 0;
         transform     : translatey(15%);
