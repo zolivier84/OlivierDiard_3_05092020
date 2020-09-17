@@ -149,7 +149,13 @@ header{
 }
 
 .arrow_stealth{
-    visibility: hidden;
+    opacity: 0;
+    cursor: default;
+}
+
+.arrow_stealth:hover{
+    transition-delay: 4s;
+    opacity: 1;
 }
 
 h1{
