@@ -13,7 +13,7 @@
             <i class="fas fa-arrow-left"></i>
         </a>
         <h1>Ohmyfood</h1>
-        <div class="arrow_stealth"><i class="fas fa-arrow-left"></i></div>
+         <div class="arrow_stealth"><a href="https://zolivier84.github.io/"><i class="fas fa-arrow-left"></i></a></div>
     </header>
     <img src="img/mini_menu_1.jpg" alt="délicious palette"> 
     <main>
