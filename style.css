@@ -20,12 +20,12 @@ body{
     margin     : 0; 
 }
 
-h1,h4,h5,ol,ul,p{
+h1,h4,ol,ul,p{
     margin     : 0;
     padding    : 0;
 }
 
-p,ol,ul,h5,h3,h6,h2{
+p,ol,ul,h3,h2{
     font-family: robotoregular;   
 }
 
@@ -36,10 +36,6 @@ h1{
 
 h3{
     margin-bottom: 5px;
-}
-
-h5{
-    margin-top : 25px;
 }
 
 h4{
